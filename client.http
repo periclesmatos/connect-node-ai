@@ -1,0 +1,37 @@
+@host = localhost:3333
+
+### Subscribe to event
+POST http://{{host}}/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Tiago",
+  "email": "Tiago@gmail.team",
+  "referrer": "128de9ba-0038-4d31-b118-76c4cb639c5b"
+}
+
+### Get subscriber by ID
+GET http://{{host}}/subscriptions/301cada5-db29-4dba-bd1c-6201b6f111e7
+
+### Access invite link
+GET http://{{host}}/invites/4b7b21d9-2b3a-4146-89a0-60467275ae6a
+
+### Get subscriber invites clicks
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/clicks
+
+### Get subscriber invites count
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/count
+
+### Get subscriber ranking position
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/position
+
+### Get ranking
+GET http://{{host}}/ranking
+
+### Answer user message
+POST http://{{host}}/messages
+Content-Type: application/json
+
+{
+  "message": "Quantas pessoas foram indicadas pelo Pericles?"
+}
