@@ -1,6 +1,6 @@
 services:
   connect-pg:
-    image: bitnami/postgresql:latest
+    image: soldevelo/postgresql:latest
     ports:
       - '5433:5432'
     environment:
@@ -9,7 +9,7 @@ services:
       - POSTGRES_DB=connect
 
   connect-redis:
-    image: bitnami/redis:latest
+    image: soldevelo/redis:latest
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
